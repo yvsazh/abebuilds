@@ -7,11 +7,16 @@ const loadProgress = document.querySelector("#load-progress");
 const rotateScreen = document.querySelector("#rotate-screen");
 const fullscreenButton = document.querySelector("#fullscreen-button");
 const errorBox = document.querySelector("#game-error");
+const uaMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+const ipadOs = /Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1;
+const isMobileDevice = navigator.userAgentData?.mobile ?? (uaMobile || ipadOs);
+document.documentElement.classList.toggle("mobile-device", isMobileDevice);
+fullscreenButton.hidden = !isMobileDevice;
 let unityInstance = null;
 let readyToPlay = false;
 
 function updateOrientationPrompt() {
-  const shouldPrompt = window.matchMedia("(orientation: portrait) and (max-width: 900px)").matches;
+  const shouldPrompt = isMobileDevice && window.matchMedia("(orientation: portrait) and (max-width: 900px)").matches;
   rotateScreen.classList.toggle("is-visible", shouldPrompt && startScreen.classList.contains("is-hidden"));
 }
 
