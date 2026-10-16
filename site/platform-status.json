@@ -1,0 +1,27 @@
+{
+  "webgl": {
+    "status": "tested",
+    "label": "Tested",
+    "note": "Played automatically in Chrome: intro, battles, returns to the world map, camp and reload with saved progress."
+  },
+  "macos": {
+    "status": "tested",
+    "label": "Tested",
+    "note": "Launched on macOS (Apple silicon): battles, world map returns and camp verified."
+  },
+  "windows": {
+    "status": "built",
+    "label": "Built · not tested",
+    "note": "Built successfully. Not yet launched on Windows hardware."
+  },
+  "android": {
+    "status": "built",
+    "label": "Built · not tested",
+    "note": "APK built successfully. Not yet run on an Android device."
+  },
+  "ios": {
+    "status": "built",
+    "label": "Xcode project",
+    "note": "Requires a Mac with Xcode and code signing to install. Not compiled or device-tested here."
+  }
+}

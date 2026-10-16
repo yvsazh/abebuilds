@@ -1,22 +1,42 @@
 {
   "windows": {
     "file": "angry-birds-epic-windows-x64.zip",
-    "size": 338022255
+    "size": 317773038,
+    "built": "2026-10-16",
+    "status": "built",
+    "label": "Built \u00b7 not tested",
+    "note": "Built successfully. Not yet launched on Windows hardware."
   },
   "macos": {
     "file": "angry-birds-epic-macos.zip",
-    "size": 412240227
+    "size": 344305981,
+    "built": "2026-10-16",
+    "status": "tested",
+    "label": "Tested",
+    "note": "Launched on macOS (Apple silicon): battles, world map returns and camp verified."
   },
   "android": {
     "file": "angry-birds-epic-android.apk",
-    "size": 368262876
+    "size": 274695872,
+    "built": "2026-10-16",
+    "status": "built",
+    "label": "Built \u00b7 not tested",
+    "note": "APK built successfully. Not yet run on an Android device."
   },
   "ios": {
     "file": "angry-birds-epic-ios-xcode-project.zip",
-    "size": 551565690
+    "size": 509434277,
+    "built": "2026-10-16",
+    "status": "built",
+    "label": "Xcode project",
+    "note": "Requires a Mac with Xcode and code signing to install. Not compiled or device-tested here."
   },
   "webgl": {
     "file": "angry-birds-epic-webgl.zip",
-    "size": 229388171
+    "size": 223205363,
+    "built": "2026-10-16",
+    "status": "tested",
+    "label": "Tested",
+    "note": "Played automatically in Chrome: intro, battles, returns to the world map, camp and reload with saved progress."
   }
 }
