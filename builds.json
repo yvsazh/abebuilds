@@ -1,0 +1,22 @@
+{
+  "windows": {
+    "file": "angry-birds-epic-windows-x64.zip",
+    "size": 338022255
+  },
+  "macos": {
+    "file": "angry-birds-epic-macos.zip",
+    "size": 412240227
+  },
+  "android": {
+    "file": "angry-birds-epic-android.apk",
+    "size": 368262876
+  },
+  "ios": {
+    "file": "angry-birds-epic-ios-xcode-project.zip",
+    "size": 551565690
+  },
+  "webgl": {
+    "file": "angry-birds-epic-webgl.zip",
+    "size": 229388171
+  }
+}

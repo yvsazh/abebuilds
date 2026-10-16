@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="354" y1="32" x2="354" y2="377" gradientUnits="userSpaceOnUse"><stop stop-color="#e97849"/><stop offset="1" stop-color="#87382f"/></linearGradient>
+    <linearGradient id="rock" x1="364" y1="275" x2="354" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#8d4b35"/><stop offset="1" stop-color="#432b2a"/></linearGradient>
+    <linearGradient id="grass" x1="347" y1="228" x2="347" y2="303" gradientUnits="userSpaceOnUse"><stop stop-color="#899054"/><stop offset="1" stop-color="#536745"/></linearGradient>
+    <linearGradient id="cape" x1="232" y1="217" x2="266" y2="328" gradientUnits="userSpaceOnUse"><stop stop-color="#d94934"/><stop offset="1" stop-color="#8f2b2b"/></linearGradient>
+    <filter id="shadow" x="97" y="38" width="565" height="369" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="15"/></filter>
+  </defs>
+  <ellipse cx="382" cy="347" rx="250" ry="25" fill="#071519" opacity=".42" filter="url(#shadow)"/>
+  <circle cx="499" cy="103" r="42" fill="#f0bd67" opacity=".87"/>
+  <circle cx="499" cy="103" r="58" stroke="#f3ce83" opacity=".17"/>
+  <path d="M99 212c29-47 59-55 89-26 30-62 72-68 112-17 37-64 89-60 127 7 44-49 87-35 110 21 43-12 75 4 88 40H99z" fill="#c96a48" opacity=".44"/>
+  <path d="M132 253c25-42 61-45 89-20 31-47 73-46 101-3 34-53 83-48 107 3 33-36 69-28 86 12 30-8 55 2 65 26H132z" fill="#e49a5d" opacity=".37"/>
+  <path d="M151 258 165 219l14 39M185 258l19-58 20 58M501 256l14-46 16 46M541 256l18-61 19 61" stroke="#344c3b" stroke-width="11" stroke-linejoin="round"/>
+  <path d="m129 273 215-47 240 40 41 37-56 45-76 4-54 30-100-10-75 15-93-48-54-37z" fill="url(#rock)" stroke="#d09352" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m151 270 193-46 235 39 38 27-31 28-98-6-65 25-104-6-74 17-72-44-37-19z" fill="url(#grass)" stroke="#d6a660" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m200 326 45 26 36-8 32 34m88-43 22 25 47-10 18-21m38-17 33 6 15-16" stroke="#ab6a42" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+  <path d="m174 275 22-26 11 25m245-5 18-23 15 28m32-3 18-18 11 22" stroke="#b0a466" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- A small hand-built keep gives the scene a storybook, medieval feel. -->
+  <path d="M365 191v-53h55v57" fill="#744132" stroke="#e3bd75" stroke-width="3"/>
+  <path d="M357 141v-14h11v8h12v-8h11v8h12v-8h11v14" fill="#bd7450" stroke="#e3bd75" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m358 139 34-30 35 30" fill="#a84937" stroke="#eac77c" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M388 194v-22q6-12 13 0v23" fill="#322c28" stroke="#e4b971" stroke-width="2"/>
+  <path d="M371 154h8v12h-8zm34 0h8v12h-8z" fill="#f0bf69"/>
+  <!-- Original red feathered adventurer, drawn for this fan page. -->
+  <path d="M227 301c-10-22-14-45-8-62 7-21 25-30 47-25 19 4 32 22 31 45l-7 37z" fill="url(#cape)" stroke="#542b2a" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m229 240-16-24 26 10m17-13-4-32 20 28" fill="#ce4935" stroke="#542b2a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M219 238q24-13 52 2l7 13q-29-9-61 2z" fill="#e8b750" stroke="#5e3c2d" stroke-width="3"/>
+  <path d="M244 260c7-10 21-11 29-2l1 15c-10 11-23 10-31 1z" fill="#f4dcaf" stroke="#422f27" stroke-width="3"/>
+  <circle cx="256" cy="269" r="3" fill="#292420"/><circle cx="270" cy="268" r="3" fill="#292420"/>
+  <path d="m258 278 14 5-15 5z" fill="#edb64f" stroke="#4b3429" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m217 292-14 8 15 5m72-16 14 8-15 5" stroke="#e8bd64" stroke-width="5" stroke-linecap="round"/>
+  <path d="M245 302v14m30-15v13" stroke="#e1ad52" stroke-width="6" stroke-linecap="round"/>
+  <path d="M326 282c-3-12 1-21 11-26 2-12 15-19 26-12 14-3 25 9 21 22 7 9 1 21-10 23l-42 1z" fill="#7b9d91" stroke="#33483f" stroke-width="3"/>
+  <path d="m335 247-3-13m19 10 6-13" stroke="#30483f" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="346" cy="267" r="2.8" fill="#242a27"/><circle cx="364" cy="267" r="2.8" fill="#242a27"/>
+  <path d="m348 276 10 2-10 4z" fill="#e8b252"/>
+  <path d="M330 251q17-10 35-5" stroke="#d9c07d" stroke-width="2"/>
+  <path d="M106 167c8-11 19-11 27-2m-6 8 9 2-8 4m444-53c6-8 15-8 21 0m-10 6 9 2-9 4" stroke="#f1cf93" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+  <path d="m93 95 4 11 11 4-11 4-4 11-4-11-11-4 11-4zm572 104 3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#f2cf83" opacity=".8"/>
+</svg>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#18282d">
+    <meta name="description" content="Community archive of Angry Birds Epic builds for desktop, mobile, and browser play.">
+    <title>Angry Birds Epic Builds</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="page-backdrop" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Angry Birds Epic builds home">
+        <span class="brand-mark" aria-hidden="true"><img src="./assets/crest.svg" alt=""></span>
+        <span class="brand-name">EPIC <b>BUILDS</b></span>
+      </a>
+      <a class="top-link" href="https://github.com/yvsazh/abebuilds/releases" target="_blank" rel="noreferrer">Release archive <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero wrap" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> COMMUNITY BUILD ARCHIVE</div>
+          <h1 id="page-title">Angry Birds Epic<br><em>builds</em></h1>
+          <p class="hero-lede">Choose your platform and continue the adventure. Or jump straight into the browser edition.</p>
+          <div class="hero-meta"><span class="meta-star" aria-hidden="true">✦</span> Build version: <strong>Unknown</strong></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-glow"></div>
+          <img src="./assets/hero-island.svg" alt="">
+          <div class="art-ribbon">THE FLOCK<br><b>RETURNS</b></div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"><span></span> PICK YOUR QUEST</div>
+      </section>
+
+      <section class="platforms wrap" aria-labelledby="platform-title">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow eyebrow-muted">TAKE YOUR PICK</div>
+            <h2 id="platform-title">Choose your platform</h2>
+          </div>
+          <p>Downloads are supplied as-is.<br>Check the notes before installing.</p>
+        </div>
+
+        <div class="platform-grid">
+          <article class="platform-card platform-windows" data-platform="windows">
+            <div class="platform-top"><span class="platform-icon icon-windows" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="platform-kind">DESKTOP</span></div>
+            <h3>Windows</h3>
+            <p>64-bit · ZIP archive</p>
+            <div class="card-bottom"><span class="file-size" data-size="windows">Preparing…</span><a class="download-button" data-download="windows" href="./_release-assets/angry-birds-epic-windows-x64.zip">Download <span aria-hidden="true">↓</span></a></div>
+          </article>
+
+          <article class="platform-card platform-macos" data-platform="macos">
+            <div class="platform-top"><span class="platform-icon icon-apple" aria-hidden="true">⌘</span><span class="platform-kind">DESKTOP</span></div>
+            <h3>macOS</h3>
+            <p>Epic.app · ZIP archive</p>
+            <div class="card-bottom"><span class="file-size" data-size="macos">Preparing…</span><a class="download-button" data-download="macos" href="./_release-assets/angry-birds-epic-macos.zip">Download <span aria-hidden="true">↓</span></a></div>
+          </article>
+
+          <article class="platform-card platform-android" data-platform="android">
+            <div class="platform-top"><span class="platform-icon icon-android" aria-hidden="true"><i></i></span><span class="platform-kind">MOBILE</span></div>
+            <h3>Android</h3>
+            <p>Direct APK download</p>
+            <div class="card-bottom"><span class="file-size" data-size="android">Preparing…</span><a class="download-button" data-download="android" href="./_release-assets/angry-birds-epic-android.apk">Download <span aria-hidden="true">↓</span></a></div>
+          </article>
+
+          <article class="platform-card platform-ios" data-platform="ios">
+            <div class="platform-top"><span class="platform-icon icon-ios" aria-hidden="true">◉</span><span class="platform-kind">MOBILE</span></div>
+            <h3>iOS</h3>
+            <p>Xcode project · not a signed IPA</p>
+            <div class="card-bottom"><span class="file-size" data-size="ios">Preparing…</span><a class="download-button" data-download="ios" href="./_release-assets/angry-birds-epic-ios-xcode-project.zip">Download <span aria-hidden="true">↓</span></a></div>
+            <div class="card-note"><span aria-hidden="true">ⓘ</span> Requires Xcode and code signing to install.</div>
+          </article>
+
+          <article class="platform-card platform-linux is-unavailable" data-platform="linux" aria-label="Linux build unavailable">
+            <div class="platform-top"><span class="platform-icon icon-linux" aria-hidden="true">◈</span><span class="platform-kind">DESKTOP</span></div>
+            <h3>Linux <span class="unavailable-tag">Unavailable</span></h3>
+            <p>Latest build did not complete.</p>
+            <div class="card-bottom"><span class="file-size">Not available</span><span class="disabled-button" aria-disabled="true">Unavailable</span></div>
+            <div class="card-note">The macOS build host is missing the Linux IL2CPP system headers.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="browser-quest wrap" aria-labelledby="browser-title">
+        <div class="quest-ornament" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>
+        <div class="quest-copy">
+          <div class="eyebrow">NO INSTALL NEEDED</div>
+          <h2 id="browser-title">Ready for the next battle?</h2>
+          <p>Launch the WebGL build in a new full-screen page. On phones, turn your device sideways for the best view.</p>
+        </div>
+        <a class="play-button" href="./play/" target="_blank" rel="noopener"><span class="play-symbol" aria-hidden="true">▶</span><span><b>Play in browser</b><small>Opens the game in a new page</small></span><span class="play-arrow" aria-hidden="true">↗</span></a>
+      </section>
+      <p class="browser-size wrap"><span aria-hidden="true">◌</span> WebGL download: <strong data-size="webgl">Preparing…</strong> <a data-download="webgl" href="./_release-assets/angry-birds-epic-webgl.zip">Get the WebGL ZIP</a></p>
+    </main>
+
+    <footer class="site-footer wrap">
+      <span class="footer-mark" aria-hidden="true">AB</span>
+      <p><strong>Fan-made community archive.</strong> This site is not affiliated with, endorsed by, or sponsored by Rovio Entertainment or its licensors. Angry Birds Epic and all related names, characters, and game assets belong to their respective rights holders. No ownership rights are claimed.</p>
+      <a href="https://github.com/yvsazh/abebuilds" target="_blank" rel="noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#141a19">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="Play the Angry Birds Epic WebGL build in a full-screen player.">
+    <title>Angry Birds Epic · Browser Game</title>
+    <link rel="icon" href="./TemplateData/favicon.ico">
+    <link rel="stylesheet" href="./player.css">
+    <script src="./player.js" defer></script>
+  </head>
+  <body>
+    <main id="game-shell" aria-label="Angry Birds Epic browser game">
+      <canvas id="game-canvas" tabindex="0" aria-label="Game canvas"></canvas>
+      <section id="start-screen" class="start-screen" aria-live="polite">
+        <div class="start-card">
+          <img class="start-crest" src="../assets/crest.svg" alt="">
+          <p class="start-kicker">THE ADVENTURE AWAITS</p>
+          <h1>Angry Birds Epic</h1>
+          <p class="start-copy">For the best view, turn your phone sideways. Enter full screen for an app-like game view where your browser supports it.</p>
+          <div class="load-track" aria-label="Game loading progress"><span id="load-progress"></span></div>
+          <p id="load-status" class="load-status">Preparing the game…</p>
+          <button id="start-button" class="start-button" type="button" disabled>Loading…</button>
+          <p id="start-hint" class="start-hint">Keep this page open while the game loads.</p>
+        </div>
+      </section>
+      <aside id="rotate-screen" class="rotate-screen" aria-live="polite">
+        <div class="phone-icon" aria-hidden="true"><span></span></div>
+        <p>Turn your phone sideways</p>
+        <small>The game is best played in landscape.</small>
+      </aside>
+      <button id="fullscreen-button" class="fullscreen-button" type="button" aria-label="Enter full screen" title="Enter full screen">⛶</button>
+      <div id="game-error" class="game-error" role="alert" hidden></div>
+    </main>
+  </body>
+</html>
