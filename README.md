@@ -12,7 +12,16 @@ On macOS, run:
 
 Then open the URL printed by the script. It serves the project under `/abebuilds/`, matching the GitHub Pages project-site path. The platform packages are available locally in `_release-assets/`.
 
-The WebGL player opens in a new page and fills the viewport. Tap **Enter game** to request browser full screen and landscape orientation where supported. Mobile browsers control their own navigation bars; for the most app-like iPhone view, add the game page to the Home Screen and launch it from there.
+The WebGL player opens in a new page. It sizes the game to the largest area of the window (inside phone safe areas) whose aspect ratio the game supports, from 4:3 to 1.9:1, and fills the rest with a dimmed backdrop, so the game is never stretched or cropped. Phones render at no more than 2x pixel density. Click or tap **Enter game** when loading finishes to enable intro-video sound and request browser full screen and landscape orientation where supported. Mobile browsers control their own navigation bars; for the most app-like iPhone view, add the game page to the Home Screen and launch it from there.
+
+## Site artwork
+
+The site uses the game's own key artwork, UI sprites and font, exported from the Unity project into `assets/`:
+
+```sh
+pip install pillow fonttools brotli
+python3 scripts/extract-site-art.py "/Users/yaroslavsazhchenko/Documents/programming/unity/ABE"
+```
 
 ## Build packages
 
@@ -29,6 +38,8 @@ python3 scripts/prepare-builds.py \
 
 The script requires macOS `ditto` so application bundles, file permissions, and project structure are preserved.
 
+Each platform card shows a status badge and note from `site/platform-status.json`. Only mark a platform `"tested"` after its build was actually launched and played; builds that were only compiled stay `"built"`. The script copies these entries and the build date into `builds.json`.
+
 ## GitHub Pages setup
 
 1. Push the site files to the `main` branch.
@@ -42,5 +53,6 @@ No GitHub Release has been created, and no GitHub Pages settings have been chang
 ## Notes
 
 - The iOS download is an Xcode project, not a signed IPA. Xcode and code signing are required to install it.
-- Linux is marked unavailable because the latest Linux IL2CPP build did not finish; the macOS build host lacks the Linux IL2CPP system headers.
+- If the WebGL game stops on a fatal browser error, the play page shows a **Reload game** button. Progress is stored in the browser's IndexedDB and survives reloads.
+- Linux is marked unavailable because this macOS build host cannot complete the Linux IL2CPP build; failed partial output is discarded and not published.
 - This is an unofficial fan-made community project. Angry Birds Epic, its names, characters, and game assets belong to their respective rights holders.

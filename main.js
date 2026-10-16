@@ -3,7 +3,7 @@ const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "::1"]);
 const isLocalPreview = LOCAL_HOSTS.has(window.location.hostname);
 
 const formatSize = (bytes) => {
-  if (!bytes) return "Size unavailable";
+  if (!bytes) return "Size unknown";
   const units = ["B", "KB", "MB", "GB"];
   let amount = bytes;
   let unit = 0;
@@ -20,6 +20,11 @@ fetch("./builds.json")
     return response.json();
   })
   .then((builds) => {
+    const dates = Object.values(builds).map((build) => build.built).filter(Boolean).sort();
+    if (dates.length) {
+      document.querySelector("[data-build-date]").textContent = dates[dates.length - 1];
+      document.querySelector("[data-build-meta]").hidden = false;
+    }
     for (const [platform, build] of Object.entries(builds)) {
       const sizeLabel = document.querySelector(`[data-size="${platform}"]`);
       if (sizeLabel) sizeLabel.textContent = formatSize(build.size);
@@ -33,7 +38,7 @@ fetch("./builds.json")
     }
   })
   .catch(() => {
-    document.querySelectorAll(".file-size, [data-size='webgl']").forEach((label) => {
-      label.textContent = "Size unavailable";
+    document.querySelectorAll("[data-size]").forEach((label) => {
+      label.textContent = "Size unknown";
     });
   });
