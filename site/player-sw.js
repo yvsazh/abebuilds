@@ -1,3 +1,4 @@
+const BUILD_VERSION = "__WEBGL_BUILD_VERSION__";
 const PARTS = ["Epic.data.part-001", "Epic.data.part-002"];
 
 self.addEventListener("install", (event) => {
@@ -18,11 +19,14 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith((async () => {
     const partsBase = new URL("Build/", self.registration.scope);
+    const buildVersion = requestUrl.searchParams.get("v") || BUILD_VERSION;
     const stream = new ReadableStream({
       async start(controller) {
         try {
           for (const part of PARTS) {
-            const response = await fetch(new URL(part, partsBase));
+            const partUrl = new URL(part, partsBase);
+            if (buildVersion) partUrl.searchParams.set("v", buildVersion);
+            const response = await fetch(partUrl);
             if (!response.ok || !response.body) throw new Error(`Could not load ${part} (${response.status}).`);
             const reader = response.body.getReader();
             while (true) {

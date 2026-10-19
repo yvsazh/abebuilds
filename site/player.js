@@ -137,14 +137,15 @@ window.addEventListener("unhandledrejection", (event) => {
   if (gameRunning && isFatalRuntimeError(event.reason, "")) showCrash(event.reason);
 });
 
-function waitForServiceWorkerControl(registration) {
-  if (navigator.serviceWorker.controller) return Promise.resolve();
+function waitForServiceWorkerControl(registration, expectedScriptUrl) {
+  if (navigator.serviceWorker.controller?.scriptURL === expectedScriptUrl) return Promise.resolve();
   return new Promise((resolve, reject) => {
     const timeout = window.setTimeout(() => {
       navigator.serviceWorker.removeEventListener("controllerchange", onControl);
       reject(new Error("This browser did not enable the game file loader. Try a current version of Chrome, Edge, Safari, or Firefox."));
     }, 10000);
     function onControl() {
+      if (navigator.serviceWorker.controller?.scriptURL !== expectedScriptUrl) return;
       window.clearTimeout(timeout);
       navigator.serviceWorker.removeEventListener("controllerchange", onControl);
       resolve();
@@ -163,9 +164,11 @@ async function startGame() {
 
   try {
     if (!("serviceWorker" in navigator)) throw new Error("This browser does not support the file loader needed for this WebGL build.");
-    const registration = await navigator.serviceWorker.register("./sw.js", { scope: "./" });
+    const workerUrl = versionedUrl("sw.js", new URL("./", window.location.href));
+    const registration = await navigator.serviceWorker.register(workerUrl, { scope: "./" });
+    await registration.update();
     await navigator.serviceWorker.ready;
-    await waitForServiceWorkerControl(registration);
+    await waitForServiceWorkerControl(registration, workerUrl);
 
     loadStatus.textContent = "Loading the game…";
     const buildUrl = new URL("./Build/", window.location.href);
