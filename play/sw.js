@@ -1,4 +1,4 @@
-const BUILD_VERSION = "5c96b015121be594";
+const BUILD_VERSION = "671256d411e7fe13";
 const PARTS = ["Epic.data.part-001", "Epic.data.part-002"];
 
 self.addEventListener("install", (event) => {
