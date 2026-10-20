@@ -2,7 +2,7 @@
   "webgl": {
     "status": "tested",
     "label": "Tested",
-    "note": "Played automatically in Chrome: intro, battles, returns to the world map, camp and reload with saved progress."
+    "note": "Production Pages player loaded in Chrome; the development-only WS_20 cutscene test moved WizPig 2,412 world units and completed the story tree."
   },
   "macos": {
     "status": "tested",

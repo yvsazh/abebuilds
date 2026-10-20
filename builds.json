@@ -33,10 +33,10 @@
   },
   "webgl": {
     "file": "angry-birds-epic-webgl.zip",
-    "size": 223205363,
-    "built": "2026-10-16",
+    "size": 223773308,
+    "built": "2026-10-20",
     "status": "tested",
     "label": "Tested",
-    "note": "Played automatically in Chrome: intro, battles, returns to the world map, camp and reload with saved progress."
+    "note": "Production Pages player loaded in Chrome; the development-only WS_20 cutscene test moved WizPig 2,412 world units and completed the story tree."
   }
 }
